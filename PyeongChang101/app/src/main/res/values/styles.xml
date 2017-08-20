@@ -9,7 +9,6 @@
         <!-- No Status, Title, Action Bar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="windowFullscreen">true</item>
     </style>
 
 </resources>
