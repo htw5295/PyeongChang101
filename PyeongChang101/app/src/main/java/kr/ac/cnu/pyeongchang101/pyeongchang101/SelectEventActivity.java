@@ -34,10 +34,6 @@ public class SelectEventActivity extends AppCompatActivity {
 
         if (check == 0) {
             ((Button) view).setBackgroundResource(R.drawable.sport_btn_big);
-            ((Button) view).getWidth();
-            ((Button) view).getHeight();
-//            ((Button) view).setWidth(550);
-            ((Button) view).setHeight(550);
             check = 1;
         } else {
             Intent intent = new Intent(this, SelectModeActivity.class);
