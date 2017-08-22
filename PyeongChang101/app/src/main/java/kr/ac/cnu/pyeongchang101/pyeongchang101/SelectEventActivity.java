@@ -31,9 +31,12 @@ public class SelectEventActivity extends AppCompatActivity {
     }
 
     public void onClickEvent(View view) {
+
         if (check == 0) {
             ((Button) view).setBackgroundResource(R.drawable.sport_btn_big);
-            ((Button) view).setWidth(550);
+            ((Button) view).getWidth();
+            ((Button) view).getHeight();
+//            ((Button) view).setWidth(550);
             ((Button) view).setHeight(550);
             check = 1;
         } else {
