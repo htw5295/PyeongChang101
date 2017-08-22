@@ -9,12 +9,10 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bg_01"
         android:id="@+id/bg_01"
+        android:scaleType="fitXY"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
