@@ -44,6 +44,19 @@
                 android:layout_marginRight="265dp"
                 android:layout_marginTop="150dp"
                 android:background="@drawable/selected_man_btn" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/selected_man_btn"
+                android:layout_marginTop="50dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+            </HorizontalScrollView>
+
         </RelativeLayout>
     </ScrollView>
 
