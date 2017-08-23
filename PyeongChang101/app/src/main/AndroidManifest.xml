@@ -23,6 +23,8 @@
             android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".SelectPlayerActivity"
             android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>

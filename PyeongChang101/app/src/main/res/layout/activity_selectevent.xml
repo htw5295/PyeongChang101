@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="40.75dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -59,10 +59,12 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="11.5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="쇼트트랙"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="#7B7B7B"
+                    android:textSize="14.25sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -77,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="40.75dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -87,10 +89,12 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="11.5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="스피드스케이팅"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="#7B7B7B"
+                    android:textSize="14.25sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -105,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="40.75dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -115,10 +119,12 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="11.5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="봅슬레이"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="#7B7B7B"
+                    android:textSize="14.25sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -133,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="40.75dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -143,10 +149,12 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="11.5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="컬링"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="#7B7B7B"
+                    android:textSize="14.25sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -161,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="40.75dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -171,10 +179,12 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="11.5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="하키"
                     android:textAlignment="center"
-                    android:textSize="20sp" />
+                    android:textColor="#7B7B7B"
+                    android:textSize="14.25sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
         </LinearLayout>
