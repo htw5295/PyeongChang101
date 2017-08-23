@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by HwangTaeWook on 2017-08-23.
  */
 
-public class MainActivity extends AppCompatActivity {
+public class SelectPlayerActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -19,6 +19,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_selectplayer);
     }
 }

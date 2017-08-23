@@ -34,7 +34,7 @@ public class SelectModeActivity extends AppCompatActivity {
             check = 1;
         } else {
             if (prevView.equals(view)) {
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, SelectPlayerActivity.class);
                 startActivity(intent);
                 finish();
             } else {

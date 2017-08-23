@@ -5,14 +5,14 @@
     android:id="@+id/activity_selectevent">
 
     <ImageView
-        android:id="@+id/bg_01"
+        android:id="@+id/bg_00"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/bg_01" />
+        app:srcCompat="@drawable/bg_00" />
 
     <Button
         android:layout_width="wrap_content"
