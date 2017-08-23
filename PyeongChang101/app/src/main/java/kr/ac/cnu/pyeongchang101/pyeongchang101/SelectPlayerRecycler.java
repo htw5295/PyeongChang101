@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * Created by HwangTaeWook on 2017-08-23.
  */
 
-public class SelectPlayerActivity extends AppCompatActivity {
+public class SelectPlayerRecycler extends AppCompatActivity {
     Context mContext;
 
     RecyclerView recyclerView;
