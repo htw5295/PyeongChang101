@@ -5,14 +5,14 @@
     android:id="@+id/activity_selectevent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bg_01"
-        android:id="@+id/bg_01"
-        android:scaleType="fitXY"
-        android:layout_alignParentTop="true"
+        android:id="@+id/bg_00"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bg_00" />
 
     <Button
         android:layout_width="wrap_content"
@@ -31,150 +31,150 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:scrollbars="none"
-        android:layout_height="172dp">
+        android:layout_height="200dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="177.5dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="41dp"
                     android:id="@+id/sport_btn_small00"
-                    android:background="@drawable/sport_btn_00"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:text="쇼트트랙"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/sport_text00"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/sport_btn_small00"
-                    android:layout_centerHorizontal="true" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="36dp"
-                android:layout_weight="1">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="41dp"
-                    android:id="@+id/sport_btn_small01"
-                    android:background="@drawable/sport_btn_00"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:text="스피드스케이팅"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/sport_text01"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/sport_btn_small01"
-                    android:layout_centerHorizontal="true" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="36dp"
-                android:layout_weight="1">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="41dp"
-                    android:onClick="onClickEvent"
-                    android:id="@+id/sport_btn_small02"
+                    android:layout_marginBottom="40.75dp"
                     android:background="@drawable/sport_btn_small"
-                    android:layout_weight="1" />
+                    android:onClick="onClickEvent" />
 
                 <TextView
-                    android:text="봅슬레이"
+                    android:id="@+id/sport_text00"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11.5dp"
+                    android:text="쇼트트랙"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="177.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/sport_btn_small01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40.75dp"
+                    android:background="@drawable/sport_btn_small"
+                    android:onClick="onClickEvent" />
+
+                <TextView
+                    android:id="@+id/sport_text01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11.5dp"
+                    android:text="스피드스케이팅"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="177.5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/sport_btn_small02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40.75dp"
+                    android:background="@drawable/sport_btn_small"
+                    android:onClick="onClickEvent" />
+
+                <TextView
                     android:id="@+id/sport_text02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11.5dp"
+                    android:text="봅슬레이"
                     android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/sport_btn_small02"
-                    android:layout_centerHorizontal="true" />
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="177.5dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="36dp"
                 android:layout_weight="1">
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="41dp"
                     android:id="@+id/sport_btn_small03"
-                    android:background="@drawable/sport_btn_00"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:text="컬링"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40.75dp"
+                    android:background="@drawable/sport_btn_small"
+                    android:onClick="onClickEvent" />
+
+                <TextView
                     android:id="@+id/sport_text03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11.5dp"
+                    android:text="컬링"
                     android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/sport_btn_small03"
-                    android:layout_centerHorizontal="true" />
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="177.5dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="36dp"
                 android:layout_weight="1">
 
                 <Button
+                    android:id="@+id/sport_btn_small04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="41dp"
-                    android:id="@+id/sport_btn_small04"
-                    android:background="@drawable/sport_btn_00"
-                    android:layout_weight="1" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40.75dp"
+                    android:background="@drawable/sport_btn_small"
+                    android:onClick="onClickEvent" />
 
                 <TextView
-                    android:text="하키"
+                    android:id="@+id/sport_text04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/sport_text04"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="11.5dp"
+                    android:text="하키"
                     android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/sport_btn_small04"
-                    android:layout_centerHorizontal="true" />
+                    android:textSize="20sp" />
 
             </RelativeLayout>
         </LinearLayout>
