@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import com.tsengvn.typekit.TypekitContextWrapper;
 
 public class SelectEventActivity extends AppCompatActivity {
     int check = 0;
+    View prevView;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -31,14 +33,20 @@ public class SelectEventActivity extends AppCompatActivity {
     }
 
     public void onClickEvent(View view) {
-
         if (check == 0) {
             ((Button) view).setBackgroundResource(R.drawable.sport_btn_big);
+            prevView = view;
             check = 1;
         } else {
-            Intent intent = new Intent(this, SelectModeActivity.class);
-            startActivity(intent);
-            finish();
+            if (prevView.equals(view)) {
+                Intent intent = new Intent(this, SelectModeActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                ((Button) prevView).setBackgroundResource(R.drawable.sport_btn_small);
+                ((Button) view).setBackgroundResource(R.drawable.sport_btn_big);
+                prevView = view;
+            }
         }
     }
 }
