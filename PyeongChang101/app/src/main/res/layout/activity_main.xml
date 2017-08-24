@@ -6,6 +6,35 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/activity_stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/stampmap_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/stampmap_popup" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/stampmap_popup"
+            android:layout_alignRight="@+id/stampmap_popup"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:onClick="onClickItemBox"
+            android:background="@drawable/itembox_btn" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/activity_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +54,7 @@
             android:id="@+id/item_popup04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/itembox_popup_for_item4" />
 
@@ -79,6 +109,7 @@
             android:layout_alignRight="@+id/item_popup01"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
+            android:onClick="onClickStamp"
             android:background="@drawable/stampmap_btn" />
 
     </RelativeLayout>

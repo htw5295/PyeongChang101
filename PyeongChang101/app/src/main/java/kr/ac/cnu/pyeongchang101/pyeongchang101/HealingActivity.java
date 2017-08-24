@@ -34,6 +34,7 @@ public class HealingActivity extends AppCompatActivity {
     ImageView bg;
 
     RelativeLayout itemLayout;
+    RelativeLayout stampLayout;
 
     int item01 = 1;
     int item02 = 0;
@@ -68,6 +69,7 @@ public class HealingActivity extends AppCompatActivity {
         bg = (ImageView) findViewById(R.id.bg_04);
 
         itemLayout = (RelativeLayout) findViewById(R.id.activity_item);
+        stampLayout = (RelativeLayout) findViewById(R.id.activity_stamp);
 
         item01Button = (Button) findViewById(R.id.item01);
         item02Button = (Button) findViewById(R.id.item02);
@@ -235,5 +237,15 @@ public class HealingActivity extends AppCompatActivity {
             item03 = 0;
             item04 = 1;
         }
+    }
+
+    public void onClickStamp(View view) {
+        stampLayout.setVisibility(View.VISIBLE);
+        itemLayout.setVisibility(View.INVISIBLE);
+    }
+
+    public void onClickItemBox(View view) {
+        stampLayout.setVisibility(View.INVISIBLE);
+        itemLayout.setVisibility(View.VISIBLE);
     }
 }
