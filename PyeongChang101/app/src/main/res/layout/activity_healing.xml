@@ -137,6 +137,38 @@
                 android:layout_marginRight="70dp"
                 android:background="@drawable/xmark_for_search" />
 
+            <Button
+                android:id="@+id/go_btn00"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="500dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/gogo_btn"/>
+
+            <Button
+                android:id="@+id/go_btn01"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/go_btn00"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/gogo_btn"/>
+
+            <Button
+                android:id="@+id/go_btn02"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/go_btn01"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="85dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/gogo_btn"/>
+
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
