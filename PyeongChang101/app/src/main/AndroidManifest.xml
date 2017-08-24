@@ -23,6 +23,14 @@
             android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".SelectPlayerActivity"
             android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".HealingActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".TrainingActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".AlbaActivity"
+            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>
