@@ -87,7 +87,9 @@ public class AlbaActivity extends AppCompatActivity {
             puzzleButtonBig.setVisibility(View.VISIBLE);
             puzzle = 1;
         } else {
-
+            Intent intent = new Intent(this, PuzzleActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 

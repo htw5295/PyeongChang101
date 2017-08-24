@@ -95,7 +95,9 @@ public class TrainingActivity extends AppCompatActivity {
             concentration = 1;
             speed = 0;
         } else {
-
+            Intent intent = new Intent(this, ConcentrationUpActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
@@ -108,7 +110,9 @@ public class TrainingActivity extends AppCompatActivity {
             concentration = 0;
             speed = 1;
         } else {
-
+            Intent intent = new Intent(this, SpeedUpActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
@@ -124,6 +128,7 @@ public class TrainingActivity extends AppCompatActivity {
             item = 1;
         } else {
             itemLayout.setVisibility(View.INVISIBLE);
+            stampLayout.setVisibility(View.INVISIBLE);
             item = 0;
         }
     }

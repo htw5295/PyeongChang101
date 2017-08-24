@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
             item = 1;
         } else {
             itemLayout.setVisibility(View.INVISIBLE);
+            stampLayout.setVisibility(View.INVISIBLE);
             item = 0;
         }
     }
