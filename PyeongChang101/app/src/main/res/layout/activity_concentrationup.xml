@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_training"
+    android:id="@+id/activity_concentrationup"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,8 +29,8 @@
             android:layout_alignRight="@+id/stampmap_popup"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:onClick="onClickItemBox"
-            android:background="@drawable/itembox_btn" />
+            android:background="@drawable/itembox_btn"
+            android:onClick="onClickItemBox" />
 
     </RelativeLayout>
 
@@ -109,19 +109,37 @@
             android:layout_alignRight="@+id/item_popup01"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:onClick="onClickStamp"
-            android:background="@drawable/stampmap_btn" />
+            android:background="@drawable/stampmap_btn"
+            android:onClick="onClickStamp" />
 
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/bg_07"
+        android:id="@+id/concentration_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="15dp"
+        android:clickable="true"
+        android:onClick="onClickConcentrationUpStart"
+        app:srcCompat="@drawable/concentration_popup" />
+
+    <ImageView
+        android:id="@+id/concentration_black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:background="#BB000000"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:onClick="onClickConcentrationUpStart" />
+
+    <ImageView
+        android:id="@+id/bg_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/bg_07" />
+        app:srcCompat="@drawable/bg_10" />
 
     <Button
         android:id="@+id/home_btn"
@@ -146,8 +164,7 @@
         android:layout_marginLeft="110dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/items_btn"
-        android:onClick="onClickItem" />
+        android:background="@drawable/items_btn" />
 
     <Button
         android:id="@+id/setting_btn"
@@ -160,52 +177,5 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/setting_btn" />
-
-    <Button
-        android:id="@+id/concentration_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="192px"
-        android:background="@drawable/unselected_concentration_btn"
-        android:onClick="onClickConcentration"
-        android:visibility="visible" />
-
-    <Button
-        android:id="@+id/speed_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="126dp"
-        android:background="@drawable/unselected_speed_btn"
-        android:onClick="onClickSpeed"
-        android:visibility="visible" />
-
-    <Button
-        android:id="@+id/concentration_btn_big"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="136px"
-        android:background="@drawable/selected_concentration_btn"
-        android:onClick="onClickConcentration"
-        android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/speed_btn_big"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="112dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/selected_speed_btn"
-        android:onClick="onClickSpeed"
-        android:visibility="invisible" />
 
 </RelativeLayout>

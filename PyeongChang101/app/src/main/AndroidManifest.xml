@@ -31,6 +31,12 @@
             android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".AlbaActivity"
             android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".SpeedUpActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".ConcentrationUpActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".PuzzleActivity"
+            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>

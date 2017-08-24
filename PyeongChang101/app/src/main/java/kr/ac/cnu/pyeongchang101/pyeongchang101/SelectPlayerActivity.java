@@ -3,6 +3,7 @@ package kr.ac.cnu.pyeongchang101.pyeongchang101;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -29,14 +30,15 @@ public class SelectPlayerActivity extends AppCompatActivity {
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
 
-    View viewHolder;
+    View prevView;
 
-    ArrayList<Holder> holders = new ArrayList<Holder>();
     ArrayList<Item> items = new ArrayList<Item>();
     boolean check[] = new boolean[5];
-    int index = 0;
     int count = 0;
     int mode;
+
+    private View 	decorView;
+    private int	uiOption;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class SelectPlayerActivity extends AppCompatActivity {
         mode = intent.getIntExtra("mode", 2);
 
         mContext = getApplicationContext();
+
+        prevView = (View) findViewById(R.id.woman_btn);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -63,6 +67,25 @@ public class SelectPlayerActivity extends AppCompatActivity {
 
         adapter = new CardAdapter(items, mContext);
         recyclerView.setAdapter(adapter);
+
+        decorView = getWindow().getDecorView();
+        uiOption = getWindow().getDecorView().getSystemUiVisibility();
+        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH )
+            uiOption |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN )
+            uiOption |= View.SYSTEM_UI_FLAG_FULLSCREEN;
+        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
+            uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        // TODO Auto-generated method stub
+        // super.onWindowFocusChanged(hasFocus);
+
+        if( hasFocus ) {
+            decorView.setSystemUiVisibility( uiOption );
+        }
     }
 
     public class Holder extends RecyclerView.ViewHolder {
@@ -173,6 +196,37 @@ public class SelectPlayerActivity extends AppCompatActivity {
             finish();
         }else {
             Toast.makeText(this, "선수를 모두 선택해 주세요.", Toast.LENGTH_LONG);
+        }
+    }
+
+    public void onClickGender(View view) {
+        if (!(view.equals(prevView))) {
+            if (((String)view.getTag()).equals("0")) {
+                items.clear();
+                items.add(new Item("김선수(21)", 0, 0));
+                items.add(new Item("이선수(22)", 0, 0));
+                items.add(new Item("최선수(27)", 0, 0));
+                items.add(new Item("박선수(23)", 0, 0));
+                items.add(new Item("전선수(25)", 0, 0));
+                view.setBackgroundResource(R.drawable.selected_woman_btn);
+                prevView.setBackgroundResource(R.drawable.unselected_man_btn);
+            } else {
+                items.clear();
+                items.add(new Item("김선수(21)", 1, 0));
+                items.add(new Item("이선수(22)", 1, 0));
+                items.add(new Item("최선수(27)", 1, 0));
+                items.add(new Item("박선수(23)", 1, 0));
+                items.add(new Item("전선수(25)", 1, 0));
+                view.setBackgroundResource(R.drawable.selected_man_btn);
+                prevView.setBackgroundResource(R.drawable.unselected_woman_btn);
+            }
+            for (int i = 0; i < 5; i++) {
+                check[i] = false;
+            }
+            prevView = view;
+            count = 0;
+            adapter.notifyDataSetChanged();
+            recyclerView.setAdapter(adapter);
         }
     }
 }
