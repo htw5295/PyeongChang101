@@ -59,7 +59,7 @@ public class SelectEventActivity extends AppCompatActivity {
 
     public void onClickEvent(View view) {
         if (check == 0) {
-            ((Button) view).setBackgroundResource(R.drawable.sport_btn_big);
+            changeImageBig(view);
             prevView = view;
             check = 1;
         } else {
@@ -68,10 +68,50 @@ public class SelectEventActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
-                ((Button) prevView).setBackgroundResource(R.drawable.sport_btn_small);
-                ((Button) view).setBackgroundResource(R.drawable.sport_btn_big);
+                changeImageBig(view);
+                changeImageSmall(prevView);
                 prevView = view;
             }
+        }
+    }
+
+    public void changeImageBig(View view) {
+        switch ((String)view.getTag()) {
+            case "1":
+                view.setBackgroundResource(R.drawable.figureskating_big);
+                break;
+            case "2":
+                view.setBackgroundResource(R.drawable.speedskating_big);
+                break;
+            case "3":
+                view.setBackgroundResource(R.drawable.sport_btn_big);
+                break;
+            case "4":
+                view.setBackgroundResource(R.drawable.curling_big);
+                break;
+            case "5":
+                view.setBackgroundResource(R.drawable.hockey_big);
+                break;
+        }
+    }
+
+    public void changeImageSmall(View view) {
+        switch ((String)view.getTag()) {
+            case "1":
+                view.setBackgroundResource(R.drawable.figureskating_small);
+                break;
+            case "2":
+                view.setBackgroundResource(R.drawable.speedskating_small);
+                break;
+            case "3":
+                view.setBackgroundResource(R.drawable.sport_btn_small);
+                break;
+            case "4":
+                view.setBackgroundResource(R.drawable.curling_small);
+                break;
+            case "5":
+                view.setBackgroundResource(R.drawable.hockey_small);
+                break;
         }
     }
 }

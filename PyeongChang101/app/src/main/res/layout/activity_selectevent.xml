@@ -50,7 +50,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="23dp"
-                    android:background="@drawable/sport_btn_small"
+                    android:tag="1"
+                    android:background="@drawable/figureskating_small"
                     android:onClick="onClickEvent" />
 
                 <TextView
@@ -60,7 +61,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="11.5dp"
-                    android:text="쇼트트랙"
+                    android:text="피겨스케이팅"
                     android:textAlignment="center"
                     android:textColor="#7B7B7B"
                     android:textSize="14.25sp"
@@ -79,7 +80,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="23dp"
-                    android:background="@drawable/sport_btn_small"
+                    android:tag="2"
+                    android:background="@drawable/speedskating_small"
                     android:onClick="onClickEvent" />
 
                 <TextView
@@ -108,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="23dp"
+                    android:tag="3"
                     android:background="@drawable/sport_btn_big"
                     android:onClick="onClickEvent" />
 
@@ -137,7 +140,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="23dp"
-                    android:background="@drawable/sport_btn_small"
+                    android:tag="4"
+                    android:background="@drawable/curling_small"
                     android:onClick="onClickEvent" />
 
                 <TextView
@@ -166,7 +170,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="23dp"
-                    android:background="@drawable/sport_btn_small"
+                    android:tag="5"
+                    android:background="@drawable/hockey_small"
                     android:onClick="onClickEvent" />
 
                 <TextView
