@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     Button healingButton;
     Button trainingButton;
     Button albaButton;
+    Button healingButtonBig;
+    Button trainingButtonBig;
+    Button albaButtonBig;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,13 +33,19 @@ public class MainActivity extends AppCompatActivity {
         healingButton = (Button) findViewById(R.id.healing_btn);
         trainingButton = (Button) findViewById(R.id.training_btn);
         albaButton = (Button) findViewById(R.id.alba_btn);
+        healingButtonBig = (Button) findViewById(R.id.healing_btn_big);
+        trainingButtonBig = (Button) findViewById(R.id.training_btn_big);
+        albaButtonBig = (Button) findViewById(R.id.alba_btn_big);
     }
 
     public void onClickHealing(View view) {
         if (healing == 0) {
-            healingButton.setBackgroundResource(R.drawable.healing_btn_big);
-            trainingButton.setBackgroundResource(R.drawable.training_btn_small);
-            albaButton.setBackgroundResource(R.drawable.alba_btn_small);
+            healingButton.setVisibility(View.INVISIBLE);
+            trainingButton.setVisibility(View.VISIBLE);
+            albaButton.setVisibility(View.VISIBLE);
+            healingButtonBig.setVisibility(View.VISIBLE);
+            trainingButtonBig.setVisibility(View.INVISIBLE);
+            albaButtonBig.setVisibility(View.INVISIBLE);
             healing = 1;
             training = 0;
             alba = 0;
@@ -50,9 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickTraining(View view) {
         if (training == 0) {
-            healingButton.setBackgroundResource(R.drawable.healing_btn_small);
-            trainingButton.setBackgroundResource(R.drawable.training_btn_big);
-            albaButton.setBackgroundResource(R.drawable.alba_btn_small);
+            healingButton.setVisibility(View.VISIBLE);
+            trainingButton.setVisibility(View.INVISIBLE);
+            albaButton.setVisibility(View.VISIBLE);
+            healingButtonBig.setVisibility(View.INVISIBLE);
+            trainingButtonBig.setVisibility(View.VISIBLE);
+            albaButtonBig.setVisibility(View.INVISIBLE);
             healing = 0;
             training = 1;
             alba = 0;
@@ -66,9 +78,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickAlba(View view) {
         if (alba == 0) {
-            healingButton.setBackgroundResource(R.drawable.healing_btn_small);
-            trainingButton.setBackgroundResource(R.drawable.training_btn_small);
-            albaButton.setBackgroundResource(R.drawable.alba_btn_big);
+            healingButton.setVisibility(View.VISIBLE);
+            trainingButton.setVisibility(View.VISIBLE);
+            albaButton.setVisibility(View.INVISIBLE);
+            healingButtonBig.setVisibility(View.INVISIBLE);
+            trainingButtonBig.setVisibility(View.INVISIBLE);
+            albaButtonBig.setVisibility(View.VISIBLE);
             healing = 0;
             training = 0;
             alba = 1;

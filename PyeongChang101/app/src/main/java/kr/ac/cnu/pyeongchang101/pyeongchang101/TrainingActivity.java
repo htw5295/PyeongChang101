@@ -18,6 +18,8 @@ public class TrainingActivity extends AppCompatActivity {
 
     Button concentrationButton;
     Button speedButton;
+    Button concentrationBigButton;
+    Button speedBigButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,16 +29,16 @@ public class TrainingActivity extends AppCompatActivity {
 
         concentrationButton = (Button) findViewById(R.id.concentration_btn);
         speedButton = (Button) findViewById(R.id.speed_btn);
+        concentrationBigButton = (Button) findViewById(R.id.concentration_btn_big);
+        speedBigButton = (Button) findViewById(R.id.speed_btn_big);
     }
 
     public void onClickConcentration(View view) {
         if (concentration == 0) {
-            concentrationButton.setBackgroundResource(R.drawable.selected_concentration_btn);
-            speedButton.setBackgroundResource(R.drawable.unselected_speed_btn);
-            concentrationButton.setWidth(760);
-            concentrationButton.setHeight(500);
-            speedButton.setWidth(740);
-            speedButton.setHeight(480);
+            concentrationButton.setVisibility(View.INVISIBLE);
+            concentrationBigButton.setVisibility(View.VISIBLE);
+            speedButton.setVisibility(View.VISIBLE);
+            speedBigButton.setVisibility(View.INVISIBLE);
             concentration = 1;
             speed = 0;
         } else {
@@ -46,12 +48,10 @@ public class TrainingActivity extends AppCompatActivity {
 
     public void onClickSpeed(View view) {
         if (speed == 0) {
-            concentrationButton.setBackgroundResource(R.drawable.unselected_concentration_btn);
-            speedButton.setBackgroundResource(R.drawable.selected_speed_btn);
-            concentrationButton.setWidth(740);
-            concentrationButton.setHeight(480);
-            speedButton.setWidth(760);
-            speedButton.setHeight(500);
+            concentrationButton.setVisibility(View.VISIBLE);
+            concentrationBigButton.setVisibility(View.INVISIBLE);
+            speedButton.setVisibility(View.INVISIBLE);
+            speedBigButton.setVisibility(View.VISIBLE);
             concentration = 0;
             speed = 1;
         } else {

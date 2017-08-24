@@ -23,6 +23,9 @@ public class HealingActivity extends AppCompatActivity {
     Button jungsunButton;
     Button pyeongchangButton;
     Button gangneungButton;
+    Button jungsunButtonBig;
+    Button pyeongchangButtonBig;
+    Button gangneungButtonBig;
     Button foodButton;
     Button areaButton;
     ImageView bg;
@@ -36,6 +39,9 @@ public class HealingActivity extends AppCompatActivity {
         jungsunButton = (Button) findViewById(R.id.jungsun_btn);
         pyeongchangButton = (Button) findViewById(R.id.pyeongchang_btn);
         gangneungButton = (Button) findViewById(R.id.gangneung_btn);
+        jungsunButtonBig = (Button) findViewById(R.id.jungsun_btn_big);
+        pyeongchangButtonBig = (Button) findViewById(R.id.pyeongchang_btn_big);
+        gangneungButtonBig = (Button) findViewById(R.id.gangneung_btn_big);
         foodButton = (Button) findViewById(R.id.food_btn);
         areaButton = (Button) findViewById(R.id.area_btn);
         bg = (ImageView) findViewById(R.id.bg_04);
@@ -43,9 +49,12 @@ public class HealingActivity extends AppCompatActivity {
 
     public void onClickJungsun(View view) {
         if (jungsun == 0) {
-            jungsunButton.setBackgroundResource(R.drawable.jungsun_btn_big);
-            pyeongchangButton.setBackgroundResource(R.drawable.pyeongchang_btn_small);
-            gangneungButton.setBackgroundResource(R.drawable.gangneung_btn_small);
+            jungsunButton.setVisibility(View.INVISIBLE);
+            pyeongchangButton.setVisibility(View.VISIBLE);
+            gangneungButton.setVisibility(View.VISIBLE);
+            jungsunButtonBig.setVisibility(View.VISIBLE);
+            pyeongchangButtonBig.setVisibility(View.INVISIBLE);
+            gangneungButtonBig.setVisibility(View.INVISIBLE);
             jungsun = 1;
             pyeongchang = 0;
             gangneung = 0;
@@ -54,9 +63,12 @@ public class HealingActivity extends AppCompatActivity {
 
     public void onClickPyeongchang(View view) {
         if (pyeongchang == 0) {
-            jungsunButton.setBackgroundResource(R.drawable.jungsun_btn_small);
-            pyeongchangButton.setBackgroundResource(R.drawable.pyeongchang_btn_big);
-            gangneungButton.setBackgroundResource(R.drawable.gangneung_btn_small);
+            jungsunButton.setVisibility(View.VISIBLE);
+            pyeongchangButton.setVisibility(View.INVISIBLE);
+            gangneungButton.setVisibility(View.VISIBLE);
+            jungsunButtonBig.setVisibility(View.INVISIBLE);
+            pyeongchangButtonBig.setVisibility(View.VISIBLE);
+            gangneungButtonBig.setVisibility(View.INVISIBLE);
             jungsun = 0;
             pyeongchang = 1;
             gangneung = 0;
@@ -65,9 +77,12 @@ public class HealingActivity extends AppCompatActivity {
 
     public void onClickGangneung(View view) {
         if (gangneung == 0) {
-            jungsunButton.setBackgroundResource(R.drawable.jungsun_btn_small);
-            pyeongchangButton.setBackgroundResource(R.drawable.pyeongchang_btn_small);
-            gangneungButton.setBackgroundResource(R.drawable.gangneung_btn_big);
+            jungsunButton.setVisibility(View.VISIBLE);
+            pyeongchangButton.setVisibility(View.VISIBLE);
+            gangneungButton.setVisibility(View.INVISIBLE);
+            jungsunButtonBig.setVisibility(View.INVISIBLE);
+            pyeongchangButtonBig.setVisibility(View.INVISIBLE);
+            gangneungButtonBig.setVisibility(View.VISIBLE);
             jungsun = 0;
             pyeongchang = 0;
             gangneung = 1;

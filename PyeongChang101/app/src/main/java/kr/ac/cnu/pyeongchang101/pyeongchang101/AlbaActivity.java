@@ -16,6 +16,7 @@ public class AlbaActivity extends AppCompatActivity {
     int puzzle = 0;
 
     Button puzzleButton;
+    Button puzzleButtonBig;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,12 +25,13 @@ public class AlbaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_alba);
 
         puzzleButton = (Button) findViewById(R.id.puzzle_btn);
+        puzzleButtonBig = (Button) findViewById(R.id.puzzle_btn_big);
     }
 
     public void onClickPuzzle(View view) {
         if (puzzle == 0) {
-            puzzleButton.setBackgroundResource(R.drawable.selected_speed_btn);
-            puzzleButton.setHeight(580);
+            puzzleButton.setVisibility(View.INVISIBLE);
+            puzzleButtonBig.setVisibility(View.VISIBLE);
             puzzle = 1;
         } else {
 
