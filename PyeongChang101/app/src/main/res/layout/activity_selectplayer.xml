@@ -23,25 +23,21 @@
 
             <Button
                 android:id="@+id/selected_woman_btn"
-                android:layout_width="61.5dp"
-                android:layout_height="61.5dp"
+                android:layout_width="250px"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="265dp"
-                android:layout_marginStart="265dp"
+                android:layout_marginLeft="969px"
                 android:layout_marginTop="150dp"
                 android:background="@drawable/selected_woman_btn" />
 
             <Button
                 android:id="@+id/man_btn"
-                android:layout_width="61.5dp"
-                android:layout_height="61.5dp"
-                android:layout_alignParentEnd="true"
+                android:layout_width="250px"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="265dp"
-                android:layout_marginRight="265dp"
+                android:layout_marginRight="969px"
                 android:layout_marginTop="150dp"
                 android:background="@drawable/unselected_man_btn" />
 

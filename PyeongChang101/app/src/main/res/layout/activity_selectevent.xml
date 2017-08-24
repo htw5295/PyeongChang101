@@ -28,10 +28,11 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:scrollbars="none"
-        android:layout_height="200dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="177.5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -48,8 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="23dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="11.5dp"
                     android:text="쇼트트랙"
                     android:textAlignment="center"
                     android:textColor="#7B7B7B"
@@ -69,7 +69,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="177.5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -78,8 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="23dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -89,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="11.5dp"
                     android:text="스피드스케이팅"
                     android:textAlignment="center"
                     android:textColor="#7B7B7B"
@@ -99,7 +98,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="177.5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -108,8 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="23dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -119,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="11.5dp"
                     android:text="봅슬레이"
                     android:textAlignment="center"
                     android:textColor="#7B7B7B"
@@ -129,7 +127,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="177.5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -138,8 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="23dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -149,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="11.5dp"
                     android:text="컬링"
                     android:textAlignment="center"
                     android:textColor="#7B7B7B"
@@ -159,7 +156,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="177.5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -168,8 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="23dp"
                     android:background="@drawable/sport_btn_small"
                     android:onClick="onClickEvent" />
 
@@ -179,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="11.5dp"
                     android:text="하키"
                     android:textAlignment="center"
                     android:textColor="#7B7B7B"

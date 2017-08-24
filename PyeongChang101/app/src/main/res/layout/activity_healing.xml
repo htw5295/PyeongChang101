@@ -1,8 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_healing"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/item_popup01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/itembox_popup_for_item1" />
+
+            <ImageView
+                android:id="@+id/item_popup04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/itembox_popup_for_item4" />
+
+            <Button
+                android:id="@+id/item01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="52dp"
+                android:background="@drawable/seleted_item1"
+                android:onClick="onClickItem01" />
+
+            <Button
+                android:id="@+id/item02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/item_popup01"
+                android:layout_alignLeft="@+id/item01"
+                android:layout_alignStart="@+id/item01"
+                android:layout_marginBottom="33dp"
+                android:background="@drawable/unseleted_item2"
+                android:onClick="onClickItem02" />
+
+            <Button
+                android:id="@+id/item03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/item01"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@+id/item01"
+                android:layout_toRightOf="@+id/item01"
+                android:background="@drawable/unseleted_item3"
+                android:onClick="onClickItem03" />
+
+            <Button
+                android:id="@+id/item04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/item02"
+                android:layout_alignBottom="@+id/item02"
+                android:layout_alignLeft="@+id/item03"
+                android:layout_alignStart="@+id/item03"
+                android:background="@drawable/unseleted_item4"
+                android:onClick="onClickItem04" />
+
+            <Button
+                android:id="@+id/stampmap_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/item_popup01"
+                android:layout_alignRight="@+id/item_popup01"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/stampmap_btn" />
+
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -133,8 +212,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="265dp"
-                android:layout_marginStart="265dp"
+                android:layout_marginLeft="243dp"
+                android:layout_marginStart="243dp"
                 android:layout_marginTop="270dp"
                 android:background="@drawable/selected_food_btn"
                 android:onClick="onClickFood" />
@@ -146,8 +225,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="265dp"
-                android:layout_marginRight="265dp"
+                android:layout_marginEnd="240dp"
+                android:layout_marginRight="240dp"
                 android:layout_marginTop="270dp"
                 android:background="@drawable/unselected_area_btn"
                 android:onClick="onClickArea" />
@@ -169,7 +248,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="23dp"
-                android:layout_marginRight="70dp"
+                android:layout_marginRight="50dp"
                 android:background="@drawable/xmark_for_search" />
 
             <Button

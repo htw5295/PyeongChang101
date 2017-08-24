@@ -5,6 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:id="@+id/activity_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/item_popup01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/itembox_popup_for_item1" />
+
+        <ImageView
+            android:id="@+id/item_popup04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/itembox_popup_for_item4" />
+
+        <Button
+            android:id="@+id/item01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/seleted_item1"
+            android:onClick="onClickItem01" />
+
+        <Button
+            android:id="@+id/item02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_popup01"
+            android:layout_alignLeft="@+id/item01"
+            android:layout_alignStart="@+id/item01"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/unseleted_item2"
+            android:onClick="onClickItem02" />
+
+        <Button
+            android:id="@+id/item03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item01"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/item01"
+            android:layout_toRightOf="@+id/item01"
+            android:background="@drawable/unseleted_item3"
+            android:onClick="onClickItem03" />
+
+        <Button
+            android:id="@+id/item04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item02"
+            android:layout_alignBottom="@+id/item02"
+            android:layout_alignLeft="@+id/item03"
+            android:layout_alignStart="@+id/item03"
+            android:background="@drawable/unseleted_item4"
+            android:onClick="onClickItem04" />
+
+        <Button
+            android:id="@+id/stampmap_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/item_popup01"
+            android:layout_alignRight="@+id/item_popup01"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/stampmap_btn" />
+
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/bg_03"
         android:layout_width="match_parent"
@@ -22,8 +100,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="35dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
         android:background="@drawable/healing_btn_small"
         android:onClick="onClickHealing" />
 
@@ -45,8 +123,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="35dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/alba_btn_small"
         android:onClick="onClickAlba" />
 
@@ -58,8 +136,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:background="@drawable/healing_btn_big"
         android:onClick="onClickHealing"
         android:visibility="invisible" />
@@ -83,8 +161,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/alba_btn_big"
         android:onClick="onClickAlba"
         android:visibility="invisible" />
@@ -105,13 +183,14 @@
         android:id="@+id/items_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="110dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/items_btn" />
+        android:background="@drawable/items_btn"
+        android:onClick="onClickItem" />
 
     <Button
         android:id="@+id/setting_btn"
