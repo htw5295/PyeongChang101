@@ -18,7 +18,7 @@ import com.tsengvn.typekit.TypekitContextWrapper;
  */
 
 public class SelectEventActivity extends AppCompatActivity {
-    int check = 0;
+    int check = 1;
     View prevView;
 
     private View 	decorView;
@@ -34,6 +34,8 @@ public class SelectEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_selectevent);
+
+        prevView = (View) findViewById(R.id.sport_btn_small02);
 
         decorView = getWindow().getDecorView();
         uiOption = getWindow().getDecorView().getSystemUiVisibility();
