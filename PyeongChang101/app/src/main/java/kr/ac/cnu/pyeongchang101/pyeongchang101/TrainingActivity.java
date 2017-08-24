@@ -1,5 +1,6 @@
 package kr.ac.cnu.pyeongchang101.pyeongchang101;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -48,5 +49,11 @@ public class TrainingActivity extends AppCompatActivity {
         } else {
 
         }
+    }
+
+    public void onClickHome(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

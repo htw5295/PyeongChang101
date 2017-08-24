@@ -15,7 +15,7 @@
         app:srcCompat="@drawable/bg_07" />
 
     <Button
-        android:id="@+id/mypage_btn"
+        android:id="@+id/home_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
@@ -24,7 +24,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/mypage_btn" />
+        android:background="@drawable/home_btn"
+        android:onClick="onClickHome" />
 
     <Button
         android:id="@+id/items_btn"
@@ -57,7 +58,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="50dp"
-        android:background="@drawable/unselected_concentration_btn" />
+        android:background="@drawable/unselected_concentration_btn"
+        android:onClick="onClickConcentration" />
 
     <Button
         android:id="@+id/speed_btn"
@@ -67,6 +69,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
         android:layout_marginTop="110dp"
-        android:background="@drawable/unselected_speed_btn" />
+        android:background="@drawable/unselected_speed_btn"
+        android:onClick="onClickSpeed" />
 
 </RelativeLayout>
