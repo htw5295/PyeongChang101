@@ -126,13 +126,13 @@
         app:srcCompat="@drawable/concentration_popup" />
 
     <ImageView
-        android:id="@+id/bg_black"
+        android:id="@+id/concentration_black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#BB000000"
         android:clickable="true"
-        android:onClick="onClickConcentrationUpStart"
-        android:elevation="10dp" />
+        android:elevation="10dp"
+        android:onClick="onClickConcentrationUpStart" />
 
     <ImageView
         android:id="@+id/bg_10"

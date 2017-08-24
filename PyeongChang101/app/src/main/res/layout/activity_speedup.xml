@@ -126,13 +126,13 @@
         app:srcCompat="@drawable/speedup_popup" />
 
     <ImageView
-        android:id="@+id/bg_black"
+        android:id="@+id/speedup_black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clickable="true"
-        android:onClick="onClickSpeedUpStart"
         android:background="#BB000000"
-        android:elevation="10dp" />
+        android:clickable="true"
+        android:elevation="10dp"
+        android:onClick="onClickSpeedUpStart" />
 
     <ImageView
         android:id="@+id/bg_09"

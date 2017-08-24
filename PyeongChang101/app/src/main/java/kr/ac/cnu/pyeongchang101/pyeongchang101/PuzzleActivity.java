@@ -78,7 +78,7 @@ public class PuzzleActivity extends AppCompatActivity {
 
     public void onClickPuzzleStart(View view) {
         findViewById(R.id.puzzle_popup).setVisibility(View.INVISIBLE);
-        findViewById(R.id.bg_black).setVisibility(View.INVISIBLE);
+        findViewById(R.id.puzzle_black).setVisibility(View.INVISIBLE);
     }
 
     public void onClickPuzzleBlock(View view) {

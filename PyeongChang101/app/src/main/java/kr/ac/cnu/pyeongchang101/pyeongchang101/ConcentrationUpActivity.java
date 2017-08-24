@@ -76,7 +76,7 @@ public class ConcentrationUpActivity extends AppCompatActivity {
 
     public void onClickConcentrationUpStart(View view) {
         findViewById(R.id.speed_popup).setVisibility(View.INVISIBLE);
-        findViewById(R.id.bg_black).setVisibility(View.INVISIBLE);
+        findViewById(R.id.concentration_black).setVisibility(View.INVISIBLE);
     }
 
     public void onClickHome(View view) {

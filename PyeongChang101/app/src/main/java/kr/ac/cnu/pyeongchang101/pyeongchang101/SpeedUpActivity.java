@@ -76,7 +76,7 @@ public class SpeedUpActivity extends AppCompatActivity {
 
     public void onClickSpeedUpStart(View view) {
         findViewById(R.id.speed_popup).setVisibility(View.INVISIBLE);
-        findViewById(R.id.bg_black).setVisibility(View.INVISIBLE);
+        findViewById(R.id.speedup_black).setVisibility(View.INVISIBLE);
     }
 
     public void onClickHome(View view) {

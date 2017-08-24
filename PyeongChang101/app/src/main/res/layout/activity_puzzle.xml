@@ -128,7 +128,7 @@
         app:srcCompat="@drawable/puzzle_popup" />
 
     <ImageView
-        android:id="@+id/bg_black"
+        android:id="@+id/puzzle_black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#BB000000"
