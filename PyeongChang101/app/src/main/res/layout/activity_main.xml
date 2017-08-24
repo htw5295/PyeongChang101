@@ -51,7 +51,7 @@
         android:onClick="onClickAlba" />
 
     <Button
-        android:id="@+id/mypage_btn"
+        android:id="@+id/home_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
