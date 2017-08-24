@@ -61,8 +61,8 @@
                 android:id="@+id/jungsun_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/gangneung_btn"
-                android:layout_alignBottom="@+id/gangneung_btn"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="130dp"
                 android:layout_alignLeft="@+id/home_btn"
                 android:layout_alignStart="@+id/home_btn"
                 android:background="@drawable/jungsun_btn_small"
@@ -82,12 +82,10 @@
                 android:id="@+id/gangneung_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="130dp"
+                android:layout_alignRight="@+id/setting_btn"
+                android:layout_alignEnd="@+id/setting_btn"
                 android:background="@drawable/gangneung_btn_small"
                 android:onClick="onClickGangneung" />
 
@@ -124,8 +122,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="375dp"
-                android:background="@drawable/search_bar"
-                android:text="asdasd" />
+                android:background="@drawable/search_bar" />
 
             <Button
                 android:id="@+id/xmark_btn"

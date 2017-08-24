@@ -33,6 +33,10 @@ public class TrainingActivity extends AppCompatActivity {
         if (concentration == 0) {
             concentrationButton.setBackgroundResource(R.drawable.selected_concentration_btn);
             speedButton.setBackgroundResource(R.drawable.unselected_speed_btn);
+            concentrationButton.setWidth(760);
+            concentrationButton.setHeight(500);
+            speedButton.setWidth(740);
+            speedButton.setHeight(480);
             concentration = 1;
             speed = 0;
         } else {
@@ -44,6 +48,10 @@ public class TrainingActivity extends AppCompatActivity {
         if (speed == 0) {
             concentrationButton.setBackgroundResource(R.drawable.unselected_concentration_btn);
             speedButton.setBackgroundResource(R.drawable.selected_speed_btn);
+            concentrationButton.setWidth(740);
+            concentrationButton.setHeight(480);
+            speedButton.setWidth(760);
+            speedButton.setHeight(500);
             concentration = 0;
             speed = 1;
         } else {
