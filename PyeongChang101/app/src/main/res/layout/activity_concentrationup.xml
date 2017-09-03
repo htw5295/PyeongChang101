@@ -120,9 +120,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:elevation="15dp"
         android:clickable="true"
+        android:elevation="15dp"
         android:onClick="onClickConcentrationUpStart"
+        android:visibility="visible"
         app:srcCompat="@drawable/concentration_popup" />
 
     <ImageView
@@ -132,7 +133,8 @@
         android:background="#BB000000"
         android:clickable="true"
         android:elevation="10dp"
-        android:onClick="onClickConcentrationUpStart" />
+        android:onClick="onClickConcentrationUpStart"
+        android:visibility="visible" />
 
     <ImageView
         android:id="@+id/bg_10"
@@ -177,5 +179,53 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/setting_btn" />
+
+    <RelativeLayout
+        android:id="@+id/concentration_field"
+        android:layout_width="match_parent"
+        android:layout_height="900px"
+        android:layout_marginTop="400px">
+
+        <Button
+            android:id="@+id/concentration_face_happy"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/concentration_face_happy"
+            android:onClick="onClickCorrect"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/concentration_face_sleep"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:onClick="onClickCorrect"
+            android:background="@drawable/concentration_face_sleep"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/concentration_face_normal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:onClick="onClickWrong"
+            android:background="@drawable/concentration_face_nomal"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/concentration_face_tired"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:onClick="onClickWrong"
+            android:background="@drawable/concentration_face_tired"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/concentration_face_upset"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:onClick="onClickCorrect"
+            android:background="@drawable/concentration_face_upset"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
