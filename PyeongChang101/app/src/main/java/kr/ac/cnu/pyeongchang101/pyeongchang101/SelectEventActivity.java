@@ -2,6 +2,7 @@ package kr.ac.cnu.pyeongchang101.pyeongchang101;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -64,6 +65,10 @@ public class SelectEventActivity extends AppCompatActivity {
             check = 1;
         } else {
             if (prevView.equals(view)) {
+                SharedPreferences sf = getSharedPreferences("startInfo", 0);
+                SharedPreferences.Editor editor = sf.edit();//저장하려면 editor가 필요
+                editor.putInt("event", Integer.parseInt((String)view.getTag()));
+                editor.commit();
                 Intent intent = new Intent(this, SelectModeActivity.class);
                 startActivity(intent);
                 finish();

@@ -28,6 +28,22 @@
         android:background="@drawable/people_2_btn_small"
         android:onClick="onClickMode" />
 
+    <TextView
+        android:id="@+id/mode_text00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2인"
+        android:textAlignment="center"
+        android:textColor="#7B7B7B"
+        android:textSize="14.25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/people_2_btn_small"
+        android:layout_alignStart="@+id/people_2_btn_small"
+        android:layout_marginBottom="15dp" />
+
     <Button
         android:id="@+id/people_4_btn_small"
         android:layout_width="wrap_content"
@@ -41,5 +57,21 @@
         android:layout_marginRight="130dp"
         android:background="@drawable/people_4_btn_small"
         android:onClick="onClickMode" />
+
+    <TextView
+        android:id="@+id/mode_text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4인"
+        android:textAlignment="center"
+        android:textColor="#7B7B7B"
+        android:textSize="14.25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/people_4_btn_small"
+        android:layout_alignStart="@+id/people_4_btn_small"
+        android:layout_marginBottom="15dp" />
 
 </RelativeLayout>

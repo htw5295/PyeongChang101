@@ -161,6 +161,12 @@ public class HealingActivity extends AppCompatActivity {
         }
     }
 
+    public void onClickGo(View view) {
+        if (false) {
+
+        }
+    }
+
     public void onClickHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
