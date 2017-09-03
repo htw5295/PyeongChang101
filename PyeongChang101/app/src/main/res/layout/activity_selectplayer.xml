@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="969px"
+                android:layout_marginLeft="242dp"
                 android:layout_marginTop="150dp"
                 android:tag="0"
                 android:onClick="onClickGender"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginRight="969px"
+                android:layout_marginRight="242dp"
                 android:layout_marginTop="150dp"
                 android:tag="1"
                 android:onClick="onClickGender"
@@ -50,7 +50,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="410dp"
                 android:layout_below="@+id/man_btn"
                 android:layout_marginTop="50dp"></android.support.v7.widget.RecyclerView>
 

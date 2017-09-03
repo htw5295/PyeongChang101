@@ -1,6 +1,7 @@
 package kr.ac.cnu.pyeongchang101.pyeongchang101;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,8 +18,8 @@ public class SelectModeActivity extends AppCompatActivity {
     int check = 0;
     View prevView;
 
-    private View 	decorView;
-    private int	uiOption;
+    private View decorView;
+    private int uiOption;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,11 +31,11 @@ public class SelectModeActivity extends AppCompatActivity {
 
         decorView = getWindow().getDecorView();
         uiOption = getWindow().getDecorView().getSystemUiVisibility();
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             uiOption |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
             uiOption |= View.SYSTEM_UI_FLAG_FULLSCREEN;
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
     }
 
@@ -43,8 +44,8 @@ public class SelectModeActivity extends AppCompatActivity {
         // TODO Auto-generated method stub
         // super.onWindowFocusChanged(hasFocus);
 
-        if( hasFocus ) {
-            decorView.setSystemUiVisibility( uiOption );
+        if (hasFocus) {
+            decorView.setSystemUiVisibility(uiOption);
         }
     }
 
@@ -60,11 +61,16 @@ public class SelectModeActivity extends AppCompatActivity {
         } else {
             if (prevView.equals(view)) {
                 Intent intent = new Intent(this, SelectPlayerActivity.class);
+                SharedPreferences sf = getSharedPreferences("startInfo", 0);
+                SharedPreferences.Editor editor = sf.edit();//저장하려면 editor가 필요
                 if ((view.getTag().equals("2"))) {
                     intent.putExtra("mode", 2);
+                    editor.putInt("mode", 2);
                 } else {
                     intent.putExtra("mode", 4);
+                    editor.putInt("mode", 4);
                 }
+                editor.commit();
                 startActivity(intent);
                 finish();
             } else {
