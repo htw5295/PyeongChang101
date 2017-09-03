@@ -2,6 +2,7 @@ package kr.ac.cnu.pyeongchang101.pyeongchang101;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 
 public class SelectPlayerActivity extends AppCompatActivity {
     Context mContext;
+
+    Player player[] = new Player[5];
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
@@ -56,6 +59,11 @@ public class SelectPlayerActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
+        player[0] = new Player("김선수(21)", 0, 50, 45, 50, 45);
+        player[1] = new Player("이선수(21)", 0, 50, 45, 50, 45);
+        player[2] = new Player("최선수(21)", 0, 50, 45, 50, 45);
+        player[3] = new Player("박선수(21)", 0, 50, 45, 50, 45);
+        player[4] = new Player("전선수(21)", 0, 50, 45, 50, 45);
         items.add(new Item("김선수(21)", 0, 0));
         items.add(new Item("이선수(22)", 0, 0));
         items.add(new Item("최선수(27)", 0, 0));
@@ -190,6 +198,20 @@ public class SelectPlayerActivity extends AppCompatActivity {
 
     public void onClickGameStart(View view) {
         if (count == mode) {
+            for (int i = 0; i < 5; i++) {
+                if (check[i] == true) {
+                    SharedPreferences sf = getSharedPreferences("player"+i, 0);
+                    SharedPreferences.Editor editor = sf.edit();//저장하려면 editor가 필요
+                    editor.putString("name", player[i].getName());
+                    editor.putInt("gender", player[i].getGender());
+                    editor.putInt("gender", player[i].getStamina());
+                    editor.putInt("gender", player[i].getStrength());
+                    editor.putInt("gender", player[i].getSpeed());
+                    editor.putInt("gender", player[i].getMental());
+                    editor.commit(); // 파일에 최종 반영함
+                }
+            }
+
             findViewById(R.id.start_btn).setBackgroundResource(R.drawable.selected_start_btn);
             Intent nextIntent = new Intent(this, MainActivity.class);
             startActivity(nextIntent);
@@ -208,6 +230,9 @@ public class SelectPlayerActivity extends AppCompatActivity {
                 items.add(new Item("최선수(27)", 0, 0));
                 items.add(new Item("박선수(23)", 0, 0));
                 items.add(new Item("전선수(25)", 0, 0));
+                for (int i = 0; i < 5; i++) {
+                    player[i].setGender(0);
+                }
                 view.setBackgroundResource(R.drawable.selected_woman_btn);
                 prevView.setBackgroundResource(R.drawable.unselected_man_btn);
             } else {
@@ -217,6 +242,9 @@ public class SelectPlayerActivity extends AppCompatActivity {
                 items.add(new Item("최선수(27)", 1, 0));
                 items.add(new Item("박선수(23)", 1, 0));
                 items.add(new Item("전선수(25)", 1, 0));
+                for (int i = 0; i < 5; i++) {
+                    player[i].setGender(1);
+                }
                 view.setBackgroundResource(R.drawable.selected_man_btn);
                 prevView.setBackgroundResource(R.drawable.unselected_woman_btn);
             }
@@ -228,5 +256,51 @@ public class SelectPlayerActivity extends AppCompatActivity {
             adapter.notifyDataSetChanged();
             recyclerView.setAdapter(adapter);
         }
+    }
+}
+
+class Player {
+    String name;
+    int gender;
+    int stamina;
+    int strength;
+    int speed;
+    int mental;
+
+    public Player(String name, int gender, int stamina, int strength, int speed, int mental) {
+        this.name = name;
+        this.gender = gender;
+        this.stamina = stamina;
+        this.strength = strength;
+        this.speed = speed;
+        this.mental = mental;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public int getStamina() {
+        return stamina;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getMental() {
+        return mental;
     }
 }

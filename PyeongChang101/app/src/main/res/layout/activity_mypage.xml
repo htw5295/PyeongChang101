@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_mypage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/stampmap_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/stampmap_popup" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/stampmap_popup"
+            android:layout_alignRight="@+id/stampmap_popup"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/itembox_btn"
+            android:onClick="onClickItemBox" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/item_popup01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/itembox_popup_for_item1" />
+
+        <ImageView
+            android:id="@+id/item_popup04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/itembox_popup_for_item4" />
+
+        <Button
+            android:id="@+id/item01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/seleted_item1"
+            android:onClick="onClickItem01" />
+
+        <Button
+            android:id="@+id/item02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_popup01"
+            android:layout_alignLeft="@+id/item01"
+            android:layout_alignStart="@+id/item01"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/unseleted_item2"
+            android:onClick="onClickItem02" />
+
+        <Button
+            android:id="@+id/item03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item01"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/item01"
+            android:layout_toRightOf="@+id/item01"
+            android:background="@drawable/unseleted_item3"
+            android:onClick="onClickItem03" />
+
+        <Button
+            android:id="@+id/item04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item02"
+            android:layout_alignBottom="@+id/item02"
+            android:layout_alignLeft="@+id/item03"
+            android:layout_alignStart="@+id/item03"
+            android:background="@drawable/unseleted_item4"
+            android:onClick="onClickItem04" />
+
+        <Button
+            android:id="@+id/stampmap_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/item_popup01"
+            android:layout_alignRight="@+id/item_popup01"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/stampmap_btn"
+            android:onClick="onClickStamp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bg_12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bg_12" />
+
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/mypage_btn" />
+
+    <Button
+        android:id="@+id/items_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="110dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/items_btn"
+        android:onClick="onClickItem" />
+
+    <Button
+        android:id="@+id/setting_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/setting_btn" />
+
+    <Button
+        android:id="@+id/question_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/question_btn" />
+
+    <RelativeLayout
+        android:id="@+id/player01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:clickable="true"
+        android:onClick="onClickPlayer">
+
+        <ImageView
+            android:id="@+id/card01"
+            android:layout_width="200dp"
+            android:layout_height="270dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            app:srcCompat="@drawable/card_man_small" />
+
+        <TextView
+            android:id="@+id/name01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card01"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="115dp"
+            android:text="김선수(21)"
+            android:textSize="12.75sp" />
+
+        <TextView
+            android:id="@+id/stamina01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card01"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="141dp"
+            android:text="50"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+        <TextView
+            android:id="@+id/strength01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/card01"
+            android:layout_alignTop="@+id/card01"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="141dp"
+            android:text="45"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+        <TextView
+            android:id="@+id/speed01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card01"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="193dp"
+            android:text="50"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+        <TextView
+            android:id="@+id/mental01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/card01"
+            android:layout_alignTop="@+id/card01"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="193dp"
+            android:text="45"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:clickable="true"
+        android:onClick="onClickPlayer">
+
+        <ImageView
+            android:id="@+id/card02"
+            android:layout_width="200dp"
+            android:layout_height="270dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            app:srcCompat="@drawable/card_man_small" />
+
+        <TextView
+            android:id="@+id/name02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card02"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="115dp"
+            android:text="김선수(21)"
+            android:textSize="12.75sp" />
+
+        <TextView
+            android:id="@+id/stamina02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card02"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="141dp"
+            android:text="50"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+        <TextView
+            android:id="@+id/strength02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/card02"
+            android:layout_alignTop="@+id/card02"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="141dp"
+            android:text="45"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+        <TextView
+            android:id="@+id/speed02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card02"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="193dp"
+            android:text="50"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+        <TextView
+            android:id="@+id/mental02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/card02"
+            android:layout_alignTop="@+id/card02"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="193dp"
+            android:text="45"
+            android:textColor="#0AC0F1"
+            android:textSize="15.75sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

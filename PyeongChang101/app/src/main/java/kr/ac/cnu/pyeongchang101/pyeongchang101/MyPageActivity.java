@@ -1,40 +1,41 @@
 package kr.ac.cnu.pyeongchang101.pyeongchang101;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Process;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.ArrayList;
 
 /**
  * Created by HwangTaeWook on 2017-08-25.
  */
 
-public class ConcentrationUpActivity extends AppCompatActivity {
-    Handler handler;
-    int check = 0;
-
-    RelativeLayout.LayoutParams layoutParams;
-
-    Button happyButton;
-    Button sleepButton;
-    Button normalButton;
-    Button upsetButton;
-    Button tiredButton;
-
+public class MyPageActivity extends AppCompatActivity {
     int item = 0;
+
+    ImageView card01;
+    ImageView card02;
+
+    TextView name01;
+    TextView stamina01;
+    TextView strength01;
+    TextView speed01;
+    TextView mental01;
+
+    TextView name02;
+    TextView stamina02;
+    TextView strength02;
+    TextView speed02;
+    TextView mental02;
 
     RelativeLayout itemLayout;
     RelativeLayout stampLayout;
@@ -59,14 +60,37 @@ public class ConcentrationUpActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_concentrationup);
+        setContentView(R.layout.activity_mypage);
 
-        //layoutParams = (RelativeLayout.LayoutParams) findViewById(R.id.concentration_field).getLayoutParams();
-        happyButton = (Button) findViewById(R.id.concentration_face_happy);
-        sleepButton = (Button) findViewById(R.id.concentration_face_sleep);
-        normalButton = (Button) findViewById(R.id.concentration_face_normal);
-        upsetButton = (Button) findViewById(R.id.concentration_face_upset);
-        tiredButton = (Button) findViewById(R.id.concentration_face_tired);
+        SharedPreferences sf1 = getSharedPreferences("player1", 0);
+        SharedPreferences sf2 = getSharedPreferences("player2", 0);
+
+        card01 = (ImageView) findViewById(R.id.card01);
+        name01 = (TextView) findViewById(R.id.name01);
+        stamina01 = (TextView) findViewById(R.id.stamina01);
+        strength01 = (TextView) findViewById(R.id.strength01);
+        speed01 = (TextView) findViewById(R.id.speed01);
+        mental01 = (TextView) findViewById(R.id.mental01);
+
+        name01.setText(sf1.getString("name", ""));
+        stamina01.setText(sf1.getInt("stamina", 0));
+        strength01.setText(sf1.getInt("strength", 0));
+        speed01.setText(sf1.getInt("speed", 0));
+        mental01.setText(sf1.getInt("mental", 0));
+
+        card02 = (ImageView) findViewById(R.id.card02);
+        name02 = (TextView) findViewById(R.id.name02);
+        stamina02 = (TextView) findViewById(R.id.stamina02);
+        strength02 = (TextView) findViewById(R.id.strength02);
+        speed02 = (TextView) findViewById(R.id.speed02);
+        mental02 = (TextView) findViewById(R.id.mental02);
+
+        name02.setText(sf2.getString("name", ""));
+        stamina02.setText(sf2.getInt("stamina", 0));
+        strength02.setText(sf2.getInt("strength", 0));
+        speed02.setText(sf2.getInt("speed", 0));
+        mental02.setText(sf2.getInt("mental", 0));
+
 
         itemLayout = (RelativeLayout) findViewById(R.id.activity_item);
         stampLayout = (RelativeLayout) findViewById(R.id.activity_stamp);
@@ -100,56 +124,8 @@ public class ConcentrationUpActivity extends AppCompatActivity {
     }
 
     public void onClickConcentrationUpStart(View view) {
-        findViewById(R.id.concentration_popup).setVisibility(View.INVISIBLE);
+        findViewById(R.id.speed_popup).setVisibility(View.INVISIBLE);
         findViewById(R.id.concentration_black).setVisibility(View.INVISIBLE);
-
-        new Thread(new MoveButtonRunnable(happyButton)).start();
-        new Thread(new MoveButtonRunnable(sleepButton)).start();
-        new Thread(new MoveButtonRunnable(normalButton)).start();
-        new Thread(new MoveButtonRunnable(upsetButton)).start();
-        new Thread(new MoveButtonRunnable(tiredButton)).start();
-    }
-
-    class MoveButtonRunnable implements Runnable {
-        Button button;
-
-        public MoveButtonRunnable(Button button) {
-            this.button = button;
-        }
-
-        @Override
-        public void run() {
-            android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-            for (int i = 0; i < 60; i++) {
-                try {
-                    Thread.sleep(((int)(Math.random() * 5) + 10) * 100);
-                    final int finalI = i;
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            RelativeLayout.LayoutParams temp = new RelativeLayout.LayoutParams(240, 350);
-                            temp.topMargin = (int) (Math.random() * 600);
-                            temp.leftMargin = (int) (Math.random() * 2320);
-                            button.setLayoutParams(temp);
-                            button.setVisibility(View.VISIBLE);
-
-                        }
-                    });
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public void onClickCorrect(View view) {
-        view.setVisibility(View.INVISIBLE);
-        check++;
-    }
-
-    public void onClickWrong(View view) {
-        view.setVisibility(View.INVISIBLE);
-        check -= 5;
     }
 
     public void onClickHome(View view) {
