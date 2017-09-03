@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -77,6 +78,28 @@ public class SpeedUpActivity extends AppCompatActivity {
     public void onClickSpeedUpStart(View view) {
         findViewById(R.id.speed_popup).setVisibility(View.INVISIBLE);
         findViewById(R.id.speedup_black).setVisibility(View.INVISIBLE);
+
+        TranslateAnimation anim = new TranslateAnimation
+                (0,   // fromXDelta
+                        0,  // toXDelta
+                        0,    // fromYDelta
+                        1000);// toYDelta
+        TranslateAnimation anim2 = new TranslateAnimation
+                (0,   // fromXDelta
+                        0,  // toXDelta
+                        0,    // fromYDelta
+                        1000);// toYDelta
+        TranslateAnimation anim3 = new TranslateAnimation
+                (0,   // fromXDelta
+                        0,  // toXDelta
+                        0,    // fromYDelta
+                        1000);// toYDelta
+        anim.setDuration(2000);
+        anim2.setDuration(2000);
+        anim3.setDuration(2000);
+        ((ImageView)findViewById(R.id.speedface)).startAnimation(anim);
+        ((ImageView)findViewById(R.id.speedface2)).startAnimation(anim);
+        ((ImageView)findViewById(R.id.speedface3)).startAnimation(anim3);
     }
 
     public void onClickHome(View view) {
