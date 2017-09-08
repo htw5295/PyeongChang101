@@ -105,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Intent intent = new Intent(this, HealingActivity.class);
             startActivity(intent);
-            finish();
         }
     }
 
@@ -124,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Intent intent = new Intent(this, TrainingActivity.class);
             startActivity(intent);
-            finish();
         }
     }
 
@@ -143,8 +141,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Intent intent = new Intent(this, AlbaActivity.class);
             startActivity(intent);
-            finish();
         }
+    }
+
+    public void onClickMyPage(View view) {
+        Intent intent = new Intent(this, MyPageActivity.class);
+        startActivity(intent);
     }
 
     public void onClickItem(View view) {

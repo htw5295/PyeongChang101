@@ -1,10 +1,12 @@
 package kr.ac.cnu.pyeongchang101.pyeongchang101;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -145,7 +147,7 @@ public class HealingActivity extends AppCompatActivity {
         if (food == 0) {
             foodButton.setBackgroundResource(R.drawable.selected_food_btn);
             areaButton.setBackgroundResource(R.drawable.unselected_area_btn);
-            bg.setImageResource(R.drawable.bg_05);
+            bg.setBackgroundResource(R.drawable.bg_05);
             food = 1;
             area = 0;
         }
@@ -155,7 +157,7 @@ public class HealingActivity extends AppCompatActivity {
         if (area == 0) {
             foodButton.setBackgroundResource(R.drawable.unselected_food_btn);
             areaButton.setBackgroundResource(R.drawable.selected_area_btn);
-            bg.setImageResource(R.drawable.bg_06);
+            bg.setBackgroundResource(R.drawable.bg_06);
             food = 0;
             area = 1;
         }
@@ -163,8 +165,16 @@ public class HealingActivity extends AppCompatActivity {
 
     public void onClickGo(View view) {
         if (true) {
-            GPSDialog dialog = new GPSDialog(this);
+            final GPSDialog dialog = new GPSDialog(this);
             dialog.show();
+
+            dialog.findViewById(R.id.gps_no_popup).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    dialog.dismiss();
+                }
+            });
         }
     }
 

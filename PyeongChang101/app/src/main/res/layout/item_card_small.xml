@@ -32,7 +32,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="171dp"
-        android:text="50"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 
@@ -44,7 +43,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginRight="30dp"
         android:layout_marginTop="171dp"
-        android:text="45"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 
@@ -55,7 +53,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="228dp"
-        android:text="50"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 
@@ -67,7 +64,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginRight="30dp"
         android:layout_marginTop="228dp"
-        android:text="45"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 

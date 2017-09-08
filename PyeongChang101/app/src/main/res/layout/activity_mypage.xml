@@ -133,7 +133,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/mypage_btn" />
+        android:background="@drawable/home_btn" />
 
     <Button
         android:id="@+id/items_btn"
