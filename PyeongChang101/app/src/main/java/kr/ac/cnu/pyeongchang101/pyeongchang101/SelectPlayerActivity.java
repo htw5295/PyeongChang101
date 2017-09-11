@@ -59,16 +59,14 @@ public class SelectPlayerActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
 
-        player[0] = new Player("김선수(21)", 0, 50, 45, 50, 45);
-        player[1] = new Player("이선수(21)", 0, 50, 45, 50, 45);
-        player[2] = new Player("최선수(21)", 0, 50, 45, 50, 45);
-        player[3] = new Player("박선수(21)", 0, 50, 45, 50, 45);
-        player[4] = new Player("전선수(21)", 0, 50, 45, 50, 45);
-        items.add(new Item("김선수(21)", 0, 0));
-        items.add(new Item("이선수(22)", 0, 0));
-        items.add(new Item("최선수(27)", 0, 0));
-        items.add(new Item("박선수(23)", 0, 0));
-        items.add(new Item("전선수(25)", 0, 0));
+        player[0] = new Player("김선수(21)", 0, (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45));
+        player[1] = new Player("이선수(22)", 0, (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45));
+        player[2] = new Player("최선수(27)", 0, (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45));
+        player[3] = new Player("박선수(23)", 0, (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45));
+        player[4] = new Player("전선수(25)", 0, (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45), (int)((Math.random() * 10) + 45));
+        for (int i = 0; i < 5; i++) {
+            items.add(new Item(player[i].getName(), 0, 0, player[i].getStamina(), player[i].getStrength(), player[i].getSpeed(), player[i].getMental()));
+        }
 
         layoutManager = new LinearLayoutManager(this, 0, true);
         recyclerView.setLayoutManager(layoutManager);
@@ -76,25 +74,25 @@ public class SelectPlayerActivity extends AppCompatActivity {
         adapter = new CardAdapter(items, mContext);
         recyclerView.setAdapter(adapter);
 
-        decorView = getWindow().getDecorView();
-        uiOption = getWindow().getDecorView().getSystemUiVisibility();
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH )
-            uiOption |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN )
-            uiOption |= View.SYSTEM_UI_FLAG_FULLSCREEN;
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
-            uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+//        decorView = getWindow().getDecorView();
+//        uiOption = getWindow().getDecorView().getSystemUiVisibility();
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH )
+//            uiOption |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN )
+//            uiOption |= View.SYSTEM_UI_FLAG_FULLSCREEN;
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
+//            uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
     }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        // TODO Auto-generated method stub
-        // super.onWindowFocusChanged(hasFocus);
-
-        if( hasFocus ) {
-            decorView.setSystemUiVisibility( uiOption );
-        }
-    }
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        // TODO Auto-generated method stub
+//        // super.onWindowFocusChanged(hasFocus);
+//
+//        if( hasFocus ) {
+//            decorView.setSystemUiVisibility( uiOption );
+//        }
+//    }
 
     public class Holder extends RecyclerView.ViewHolder {
         public TextView name;
@@ -181,18 +179,18 @@ public class SelectPlayerActivity extends AppCompatActivity {
         int i = (int) view.getTag();
         if (check[i]) {
             check[i] = false;
-            items.set(i, new Item(items.get(i).getName(), items.get(i).getGender(), 0));
+            items.set(i, new Item(items.get(i).getName(), items.get(i).getGender(), 0, items.get(i).getStamina(), items.get(i).getStrength(), items.get(i).getSpeed(), items.get(i).getMental()));
             count--;
             adapter.notifyDataSetChanged();
             recyclerView.setAdapter(adapter);
         } else if (count < mode) {
             check[i] = true;
-            items.set(i, new Item(items.get(i).getName(), items.get(i).getGender(), 1));
+            items.set(i, new Item(items.get(i).getName(), items.get(i).getGender(), 1, items.get(i).getStamina(), items.get(i).getStrength(), items.get(i).getSpeed(), items.get(i).getMental()));
             count++;
             adapter.notifyDataSetChanged();
             recyclerView.setAdapter(adapter);
         } else {
-            Toast.makeText(this, "선수를 모두 선택하였습니다.", Toast.LENGTH_LONG);
+            Toast.makeText(this, "선수를 모두 선택하였습니다.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -204,10 +202,10 @@ public class SelectPlayerActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sf.edit();//저장하려면 editor가 필요
                     editor.putString("name", player[i].getName());
                     editor.putInt("gender", player[i].getGender());
-                    editor.putInt("gender", player[i].getStamina());
-                    editor.putInt("gender", player[i].getStrength());
-                    editor.putInt("gender", player[i].getSpeed());
-                    editor.putInt("gender", player[i].getMental());
+                    editor.putInt("stamina", player[i].getStamina());
+                    editor.putInt("strength", player[i].getStrength());
+                    editor.putInt("speed", player[i].getSpeed());
+                    editor.putInt("mental", player[i].getMental());
                     editor.commit(); // 파일에 최종 반영함
                 }
             }
@@ -217,7 +215,7 @@ public class SelectPlayerActivity extends AppCompatActivity {
             startActivity(nextIntent);
             finish();
         }else {
-            Toast.makeText(this, "선수를 모두 선택해 주세요.", Toast.LENGTH_LONG);
+            Toast.makeText(this, "선수를 모두 선택해 주세요.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -225,11 +223,9 @@ public class SelectPlayerActivity extends AppCompatActivity {
         if (!(view.equals(prevView))) {
             if (((String)view.getTag()).equals("0")) {
                 items.clear();
-                items.add(new Item("김선수(21)", 0, 0));
-                items.add(new Item("이선수(22)", 0, 0));
-                items.add(new Item("최선수(27)", 0, 0));
-                items.add(new Item("박선수(23)", 0, 0));
-                items.add(new Item("전선수(25)", 0, 0));
+                for (int i = 0; i < 5; i++) {
+                    items.add(new Item(player[i].getName(), 0, 0, player[i].getStamina(), player[i].getStrength(), player[i].getSpeed(), player[i].getMental()));
+                }
                 for (int i = 0; i < 5; i++) {
                     player[i].setGender(0);
                 }
@@ -237,11 +233,9 @@ public class SelectPlayerActivity extends AppCompatActivity {
                 prevView.setBackgroundResource(R.drawable.unselected_man_btn);
             } else {
                 items.clear();
-                items.add(new Item("김선수(21)", 1, 0));
-                items.add(new Item("이선수(22)", 1, 0));
-                items.add(new Item("최선수(27)", 1, 0));
-                items.add(new Item("박선수(23)", 1, 0));
-                items.add(new Item("전선수(25)", 1, 0));
+                for (int i = 0; i < 5; i++) {
+                    items.add(new Item(player[i].getName(), 1, 0, player[i].getStamina(), player[i].getStrength(), player[i].getSpeed(), player[i].getMental()));
+                }
                 for (int i = 0; i < 5; i++) {
                     player[i].setGender(1);
                 }

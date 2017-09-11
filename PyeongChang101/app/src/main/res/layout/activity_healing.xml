@@ -245,8 +245,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="245dp"
-                android:layout_marginStart="245dp"
+                android:layout_marginLeft="268dp"
+                android:layout_marginStart="268dp"
                 android:layout_marginTop="270dp"
                 android:background="@drawable/selected_food_btn"
                 android:onClick="onClickFood" />
@@ -258,8 +258,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="242dp"
-                android:layout_marginRight="242dp"
+                android:layout_marginEnd="266dp"
+                android:layout_marginRight="266dp"
                 android:layout_marginTop="270dp"
                 android:background="@drawable/unselected_area_btn"
                 android:onClick="onClickArea" />
@@ -280,8 +280,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/search_bar"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="26dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="28dp"
                 android:background="@drawable/xmark_for_search" />
 
             <Button
@@ -292,6 +292,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="500dp"
+                android:onClick="onClickGo"
                 android:background="@drawable/gogo_btn" />
 
             <Button
@@ -303,6 +304,7 @@
                 android:layout_below="@+id/go_btn00"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="80dp"
+                android:onClick="onClickGo"
                 android:background="@drawable/gogo_btn" />
 
             <Button
@@ -314,15 +316,8 @@
                 android:layout_below="@+id/go_btn01"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="85dp"
+                android:onClick="onClickGo"
                 android:background="@drawable/gogo_btn" />
-
-            <ImageView
-                android:id="@+id/gps_no_popup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/gps_no_popup"/>
 
         </RelativeLayout>
     </ScrollView>

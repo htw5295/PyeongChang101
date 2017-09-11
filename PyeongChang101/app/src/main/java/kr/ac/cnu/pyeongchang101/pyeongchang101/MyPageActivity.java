@@ -62,8 +62,8 @@ public class MyPageActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_mypage);
 
-        SharedPreferences sf1 = getSharedPreferences("player1", 0);
-        SharedPreferences sf2 = getSharedPreferences("player2", 0);
+        SharedPreferences sf1 = getSharedPreferences("player0", 0);
+        SharedPreferences sf2 = getSharedPreferences("player1", 0);
 
         card01 = (ImageView) findViewById(R.id.card01);
         name01 = (TextView) findViewById(R.id.name01);
@@ -73,10 +73,10 @@ public class MyPageActivity extends AppCompatActivity {
         mental01 = (TextView) findViewById(R.id.mental01);
 
         name01.setText(sf1.getString("name", ""));
-        stamina01.setText(sf1.getInt("stamina", 0));
-        strength01.setText(sf1.getInt("strength", 0));
-        speed01.setText(sf1.getInt("speed", 0));
-        mental01.setText(sf1.getInt("mental", 0));
+        stamina01.setText(""+ sf1.getInt("stamina", 0));
+        strength01.setText(""+ sf1.getInt("strength", 0));
+        speed01.setText(""+ sf1.getInt("speed", 0));
+        mental01.setText(""+ sf1.getInt("mental", 0));
 
         card02 = (ImageView) findViewById(R.id.card02);
         name02 = (TextView) findViewById(R.id.name02);
@@ -86,10 +86,10 @@ public class MyPageActivity extends AppCompatActivity {
         mental02 = (TextView) findViewById(R.id.mental02);
 
         name02.setText(sf2.getString("name", ""));
-        stamina02.setText(sf2.getInt("stamina", 0));
-        strength02.setText(sf2.getInt("strength", 0));
-        speed02.setText(sf2.getInt("speed", 0));
-        mental02.setText(sf2.getInt("mental", 0));
+        stamina02.setText(""+ sf2.getInt("stamina", 0));
+        strength02.setText(""+ sf2.getInt("strength", 0));
+        speed02.setText(""+ sf2.getInt("speed", 0));
+        mental02.setText(""+ sf2.getInt("mental", 0));
 
 
         itemLayout = (RelativeLayout) findViewById(R.id.activity_item);
@@ -103,30 +103,25 @@ public class MyPageActivity extends AppCompatActivity {
         itemPopup01 = (ImageView) findViewById(R.id.item_popup01);
         itemPopup04 = (ImageView) findViewById(R.id.item_popup04);
 
-        decorView = getWindow().getDecorView();
-        uiOption = getWindow().getDecorView().getSystemUiVisibility();
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH )
-            uiOption |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN )
-            uiOption |= View.SYSTEM_UI_FLAG_FULLSCREEN;
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
-            uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+//        decorView = getWindow().getDecorView();
+//        uiOption = getWindow().getDecorView().getSystemUiVisibility();
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH )
+//            uiOption |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN )
+//            uiOption |= View.SYSTEM_UI_FLAG_FULLSCREEN;
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
+//            uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
     }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        // TODO Auto-generated method stub
-        // super.onWindowFocusChanged(hasFocus);
-
-        if( hasFocus ) {
-            decorView.setSystemUiVisibility( uiOption );
-        }
-    }
-
-    public void onClickConcentrationUpStart(View view) {
-        findViewById(R.id.speed_popup).setVisibility(View.INVISIBLE);
-        findViewById(R.id.concentration_black).setVisibility(View.INVISIBLE);
-    }
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        // TODO Auto-generated method stub
+//        // super.onWindowFocusChanged(hasFocus);
+//
+//        if( hasFocus ) {
+//            decorView.setSystemUiVisibility( uiOption );
+//        }
+//    }
 
     public void onClickHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);

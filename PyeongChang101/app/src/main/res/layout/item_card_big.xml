@@ -34,7 +34,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginLeft="85dp"
         android:layout_marginTop="202dp"
-        android:text="50"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 
@@ -46,7 +45,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginRight="40dp"
         android:layout_marginTop="202dp"
-        android:text="45"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 
@@ -58,7 +56,6 @@
         android:layout_alignTop="@+id/card"
         android:layout_marginLeft="85dp"
         android:layout_marginTop="270dp"
-        android:text="50"
         android:textColor="#0AC0F1"
         android:textSize="15.75sp" />
 
