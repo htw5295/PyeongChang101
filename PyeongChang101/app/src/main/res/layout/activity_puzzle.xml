@@ -184,302 +184,329 @@
 
     <Button
         android:id="@+id/puzzle_block00"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="314px"
-        android:layout_marginTop="511px"
-        android:tag="0"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_marginLeft="108.5dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="0" />
 
     <Button
         android:id="@+id/puzzle_block01"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="314px"
-        android:layout_marginTop="706px"
-        android:tag="1"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_marginLeft="108.5dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="1" />
 
     <Button
         android:id="@+id/puzzle_block02"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="314px"
-        android:layout_marginTop="901px"
-        android:tag="2"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_marginLeft="108.5dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="2" />
 
     <Button
         android:id="@+id/puzzle_block03"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="509px"
-        android:layout_marginTop="511px"
-        android:tag="3"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block00"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="3" />
 
     <Button
         android:id="@+id/puzzle_block04"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="509px"
-        android:layout_marginTop="706px"
-        android:tag="4"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block01"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="4" />
 
     <Button
         android:id="@+id/puzzle_block05"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="509px"
-        android:layout_marginTop="901px"
-        android:tag="5"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block02"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="5" />
 
     <Button
         android:id="@+id/puzzle_block06"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="704px"
-        android:layout_marginTop="511px"
-        android:tag="6"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block03"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="6" />
 
     <Button
         android:id="@+id/puzzle_block07"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="704px"
-        android:layout_marginTop="706px"
-        android:tag="7"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block04"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="7" />
 
     <Button
         android:id="@+id/puzzle_block08"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="704px"
-        android:layout_marginTop="901px"
-        android:tag="8"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block05"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="8" />
 
     <Button
         android:id="@+id/puzzle_block09"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="899px"
-        android:layout_marginTop="511px"
-        android:tag="9"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block06"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="9" />
 
     <Button
         android:id="@+id/puzzle_block10"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="899px"
-        android:layout_marginTop="706px"
-        android:tag="10"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block07"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="10" />
 
     <Button
         android:id="@+id/puzzle_block11"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="899px"
-        android:layout_marginTop="901px"
-        android:tag="11"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block08"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="11" />
 
     <Button
         android:id="@+id/puzzle_block12"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1094px"
-        android:layout_marginTop="511px"
-        android:tag="12"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block09"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="12" />
 
     <Button
         android:id="@+id/puzzle_block13"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1094px"
-        android:layout_marginTop="706px"
-        android:tag="13"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block10"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="13" />
 
     <Button
         android:id="@+id/puzzle_block14"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1094px"
-        android:layout_marginTop="901px"
-        android:tag="14"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block11"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="14" />
 
     <Button
         android:id="@+id/puzzle_block15"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1289px"
-        android:layout_marginTop="511px"
-        android:tag="15"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block12"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="15" />
 
     <Button
         android:id="@+id/puzzle_block16"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1289px"
-        android:layout_marginTop="706px"
-        android:tag="16"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block13"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="16" />
 
     <Button
         android:id="@+id/puzzle_block17"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1289px"
-        android:layout_marginTop="901px"
-        android:tag="17"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block14"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="17" />
 
     <Button
         android:id="@+id/puzzle_block18"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1484px"
-        android:layout_marginTop="511px"
-        android:tag="18"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block15"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="18" />
 
     <Button
         android:id="@+id/puzzle_block19"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1484px"
-        android:layout_marginTop="706px"
-        android:tag="19"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block16"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="19" />
 
     <Button
         android:id="@+id/puzzle_block20"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1484px"
-        android:layout_marginTop="901px"
-        android:tag="20"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block17"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="20" />
 
     <Button
         android:id="@+id/puzzle_block21"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1679px"
-        android:layout_marginTop="511px"
-        android:tag="21"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block18"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="21" />
 
     <Button
         android:id="@+id/puzzle_block22"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1679px"
-        android:layout_marginTop="706px"
-        android:tag="22"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block19"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="22" />
 
     <Button
         android:id="@+id/puzzle_block23"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1679px"
-        android:layout_marginTop="901px"
-        android:tag="23"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block20"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="23" />
 
     <Button
         android:id="@+id/puzzle_block24"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1874px"
-        android:layout_marginTop="511px"
-        android:tag="24"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block21"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="24" />
 
     <Button
         android:id="@+id/puzzle_block25"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1874px"
-        android:layout_marginTop="706px"
-        android:tag="25"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block22"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="25" />
 
     <Button
         android:id="@+id/puzzle_block26"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="1874px"
-        android:layout_marginTop="901px"
-        android:tag="26"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block23"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="26" />
 
     <Button
         android:id="@+id/puzzle_block27"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="2069px"
-        android:layout_marginTop="511px"
-        android:tag="27"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block24"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="127.75dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="27" />
 
     <Button
         android:id="@+id/puzzle_block28"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="2069px"
-        android:layout_marginTop="706px"
-        android:tag="28"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block25"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="176.5dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="28" />
 
     <Button
         android:id="@+id/puzzle_block29"
-        android:layout_width="177px"
-        android:layout_height="177px"
-        android:layout_marginLeft="2069px"
-        android:layout_marginTop="901px"
-        android:tag="29"
+        android:layout_width="44.25dp"
+        android:layout_height="44.25dp"
+        android:layout_alignLeft="@id/puzzle_block26"
+        android:layout_marginLeft="48.75dp"
+        android:layout_marginTop="225.25dp"
+        android:background="@drawable/puzzle_block_black"
         android:onClick="onClickPuzzleBlock"
-        android:background="@drawable/puzzle_block_black" />
+        android:tag="29" />
 
 </RelativeLayout>

@@ -154,6 +154,10 @@ public class SelectPlayerActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(Holder holder, int position) {
             holder.name.setText(mItems.get(position).getName());
+            holder.stamina.setText(""+mItems.get(position).getStamina());
+            holder.strength.setText(""+mItems.get(position).getStrength());
+            holder.speed.setText(""+mItems.get(position).getSpeed());
+            holder.mental.setText(""+mItems.get(position).getMental());
             if (mItems.get(position).getGender() == 0) {
                 if (mItems.get(position).getCheck() == 0) {
                     holder.image.setImageResource(R.drawable.card_woman_small);
