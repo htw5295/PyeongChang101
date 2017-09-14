@@ -133,6 +133,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
+        android:onClick="onClickHome"
         android:background="@drawable/home_btn" />
 
     <Button
@@ -177,7 +178,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="90dp"
         android:clickable="true"
         android:onClick="onClickPlayer">
 
@@ -254,7 +255,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="90dp"
         android:clickable="true"
         android:onClick="onClickPlayer">
 

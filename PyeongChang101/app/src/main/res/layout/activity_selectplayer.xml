@@ -25,27 +25,27 @@
 
             <Button
                 android:id="@+id/woman_btn"
-                android:layout_width="250px"
-                android:layout_height="wrap_content"
+                android:layout_width="62.5dp"
+                android:layout_height="66dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="242dp"
+                android:layout_marginLeft="250dp"
                 android:layout_marginTop="150dp"
-                android:tag="0"
+                android:background="@drawable/selected_woman_btn"
                 android:onClick="onClickGender"
-                android:background="@drawable/selected_woman_btn" />
+                android:tag="0" />
 
             <Button
                 android:id="@+id/man_btn"
-                android:layout_width="250px"
-                android:layout_height="wrap_content"
+                android:layout_width="62.5dp"
+                android:layout_height="66dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginRight="242dp"
+                android:layout_marginRight="250dp"
                 android:layout_marginTop="150dp"
-                android:tag="1"
+                android:background="@drawable/unselected_man_btn"
                 android:onClick="onClickGender"
-                android:background="@drawable/unselected_man_btn" />
+                android:tag="1" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerview"

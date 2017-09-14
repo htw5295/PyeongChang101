@@ -128,8 +128,8 @@ public class ConcentrationUpActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             RelativeLayout.LayoutParams temp = new RelativeLayout.LayoutParams(240, 350);
-                            temp.topMargin = (int) (Math.random() * 600);
-                            temp.leftMargin = (int) (Math.random() * 2320);
+                            temp.topMargin = (int) (Math.random() * 350);
+                            temp.leftMargin = (int) (Math.random() * 1850);
                             button.setLayoutParams(temp);
                             button.setVisibility(View.VISIBLE);
 

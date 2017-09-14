@@ -183,7 +183,7 @@
     <RelativeLayout
         android:id="@+id/concentration_field"
         android:layout_width="match_parent"
-        android:layout_height="900px"
+        android:layout_height="225dp"
         android:layout_marginTop="400px">
 
         <Button
@@ -198,32 +198,32 @@
             android:id="@+id/concentration_face_sleep"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:onClick="onClickCorrect"
             android:background="@drawable/concentration_face_sleep"
+            android:onClick="onClickCorrect"
             android:visibility="invisible" />
 
         <Button
             android:id="@+id/concentration_face_normal"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:onClick="onClickWrong"
             android:background="@drawable/concentration_face_nomal"
+            android:onClick="onClickWrong"
             android:visibility="invisible" />
 
         <Button
             android:id="@+id/concentration_face_tired"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:onClick="onClickWrong"
             android:background="@drawable/concentration_face_tired"
+            android:onClick="onClickWrong"
             android:visibility="invisible" />
 
         <Button
             android:id="@+id/concentration_face_upset"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:onClick="onClickCorrect"
             android:background="@drawable/concentration_face_upset"
+            android:onClick="onClickCorrect"
             android:visibility="invisible" />
 
     </RelativeLayout>
